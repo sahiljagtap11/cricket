@@ -3,154 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Football Scorecard</title>
+    <title>Cricket Scorecard</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            padding: 20px;
+            font-family: 'Arial', sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
         }
-        .scorecard {
-            width: 600px;
-            margin: 0 auto;
+        .scorecard-container {
+            width: 70%;
+            margin: 40px auto;
             background-color: #fff;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
         }
-        h1 {
+        .scorecard-header {
+            background-color: #ffcc00;
+            padding: 20px;
             text-align: center;
             color: #333;
         }
-        h2 {
-            margin-bottom: 5px;
-            color: #444;
+        .scorecard-header h1 {
+            margin: 0;
+            font-size: 32px;
+            letter-spacing: 1px;
         }
-        table {
+        .team-names {
+            background-color: #0055a5;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+        }
+        .scorecard-table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 20px;
+            margin: 20px 0;
         }
-        table, th, td {
-            border: 1px solid #ddd;
-        }
-        th, td {
-            padding: 8px;
+        .scorecard-table th, .scorecard-table td {
+            padding: 12px 15px;
             text-align: center;
+            border-bottom: 1px solid #ddd;
         }
-        th {
-            background-color: #4CAF50;
+        .scorecard-table th {
+            background-color: #0055a5;
             color: white;
-        }
-        .summary {
-            margin-top: 20px;
-        }
-        .summary p {
             font-size: 18px;
-            margin: 5px 0;
+        }
+        .scorecard-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .scorecard-table td {
+            font-size: 16px;
+        }
+        .total-score {
+            background-color: #ffcc00;
+            font-weight: bold;
+            color: #333;
+            padding: 10px;
+            margin: 0;
+        }
+        .footer {
+            background-color: #0055a5;
+            color: white;
+            text-align: center;
+            padding: 10px;
         }
     </style>
 </head>
 <body>
 
-    <div class="scorecard">
-        <h1>Cricket Scorecard</h1>
-        <h2>Team A vs Team B</h2>
-        <div class="summary">
-            <p><strong>Team A: 152/5 (20 overs)</strong></p>
-            <p><strong>Team B: 142/7 (20 overs)</strong></p>
-            <p><strong>Result: Team A won by 10 runs</strong></p>
+    <div class="scorecard-container">
+        <div class="scorecard-header">
+            <h1>Cricket Scorecard</h1>
         </div>
-
-        <h2>Batting Performance - Team A</h2>
-        <table>
-            <tr>
-                <th>Batsman</th>
-                <th>Runs</th>
-                <th>Balls</th>
-                <th>4s</th>
-                <th>6s</th>
-                <th>Strike Rate</th>
-            </tr>
-            <tr>
-                <td>Player 1</td>
-                <td>60</td>
-                <td>40</td>
-                <td>5</td>
-                <td>2</td>
-                <td>150.00</td>
-            </tr>
-            <tr>
-                <td>Player 2</td>
-                <td>35</td>
-                <td>28</td>
-                <td>4</td>
-                <td>1</td>
-                <td>125.00</td>
-            </tr>
-            <tr>
-                <td>Player 3</td>
-                <td>25</td>
-                <td>20</td>
-                <td>3</td>
-                <td>0</td>
-                <td>125.00</td>
-            </tr>
-            <tr>
-                <td>Player 4</td>
-                <td>10</td>
-                <td>15</td>
-                <td>1</td>
-                <td>0</td>
-                <td>66.67</td>
-            </tr>
-            <tr>
-                <td>Player 5</td>
-                <td>8</td>
-                <td>12</td>
-                <td>0</td>
-                <td>0</td>
-                <td>66.67</td>
-            </tr>
+        <div class="team-names">
+            <p>Team A vs Team B</p>
+        </div>
+        <table class="scorecard-table">
+            <thead>
+                <tr>
+                    <th>Batsman</th>
+                    <th>Runs</th>
+                    <th>Balls</th>
+                    <th>4s</th>
+                    <th>6s</th>
+                    <th>Strike Rate</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Player 1</td>
+                    <td>45</td>
+                    <td>32</td>
+                    <td>6</td>
+                    <td>2</td>
+                    <td>140.62</td>
+                </tr>
+                <tr>
+                    <td>Player 2</td>
+                    <td>30</td>
+                    <td>25</td>
+                    <td>4</td>
+                    <td>1</td>
+                    <td>120.00</td>
+                </tr>
+                <tr>
+                    <td>Player 3</td>
+                    <td>55</td>
+                    <td>40</td>
+                    <td>7</td>
+                    <td>3</td>
+                    <td>137.50</td>
+                </tr>
+                <tr>
+                    <td>Player 4</td>
+                    <td>22</td>
+                    <td>18</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>122.22</td>
+                </tr>
+                <tr>
+                    <td>Player 5</td>
+                    <td>10</td>
+                    <td>8</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>125.00</td>
+                </tr>
+            </tbody>
         </table>
-
-        <h2>Bowling Performance - Team B</h2>
-        <table>
-            <tr>
-                <th>Bowler</th>
-                <th>Overs</th>
-                <th>Runs</th>
-                <th>Wickets</th>
-                <th>Economy</th>
-            </tr>
-            <tr>
-                <td>Bowler 1</td>
-                <td>4</td>
-                <td>25</td>
-                <td>2</td>
-                <td>6.25</td>
-            </tr>
-            <tr>
-                <td>Bowler 2</td>
-                <td>4</td>
-                <td>30</td>
-                <td>1</td>
-                <td>7.50</td>
-            </tr>
-            <tr>
-                <td>Bowler 3</td>
-                <td>4</td>
-                <td>35</td>
-                <td>0</td>
-                <td>8.75</td>
-            </tr>
-            <tr>
-                <td>Bowler 4</td>
-                <td>4</td>
-                <td>40</td>
-                <td>1</td>
-                <td>10.00</td>
-            </tr>
-        </table>
+        <div class="total-score">
+            <p>Total: 162/4 (20 Overs)</p>
+        </div>
+        <div class="footer">
+            <p>&copy; 2024 Cricket League</p>
+        </div>
     </div>
 
 </body>
